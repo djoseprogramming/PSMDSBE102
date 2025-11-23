@@ -1,0 +1,28 @@
+# Large data files
+fma_small/
+fma_medium/
+preprocessed_features/
+saved_models/
+mlruns/
+results/
+
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

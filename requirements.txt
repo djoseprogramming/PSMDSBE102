@@ -1,0 +1,55 @@
+# Music Genre Classification - PSMDSBE 102
+# Production Requirements
+
+# Core Data Science & ML
+numpy==1.24.3
+pandas==2.0.1
+scikit-learn==1.2.2
+scipy==1.15.3
+
+# Model Training
+lightgbm==4.6.0
+
+# Audio Processing
+librosa==0.11.0
+soundfile==0.13.1
+audioread==3.0.1
+
+# Distributed Computing
+ray[tune,default]==2.50.1
+
+# Experiment Tracking
+mlflow==3.4.0
+
+# CLI Interface
+typer==0.19.2
+rich==14.2.0
+
+# Data Quality Analysis
+cleanlab==2.7.1
+
+# Utilities
+joblib==1.5.2
+tqdm==4.67.1
+
+# Visualization (for evaluation)
+matplotlib==3.7.1
+seaborn==0.12.2
+
+# Optional: For Jupyter notebook support (if needed)
+# ipykernel==6.29.5
+# jupyterlab==3.6.3
+
+# Installation Instructions:
+# 1. Install Python packages:
+#    pip install -r requirements.txt
+#
+# 2. Install FFmpeg (required for librosa):
+#    - Windows (with conda): conda install -c conda-forge ffmpeg
+#    - macOS: brew install ffmpeg
+#    - Linux: sudo apt-get install ffmpeg
+#
+# 3. Verify installation:
+#    python -c "import librosa; print('librosa OK')"
+#    python -c "import ray; print('ray OK')"
+#    python -c "import mlflow; print('mlflow OK')"
