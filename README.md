@@ -1,7 +1,7 @@
 # Music Genre Classification with Distributed Computing and MLOps
 
 **Course**: PSMDSBE 102: Special Topics in Data Science  
-**Institution**: Technological Institute of the Philippines (TIP)  
+**Institution**: Technological Institute of the Philippines
 **Students**: Daryll Jose, Martin Basbacio  
 **Date**: November 2025
 
@@ -35,10 +35,7 @@ This project demonstrates **end-to-end MLOps pipeline** development using the FM
 
 ### Objective
 Build a production-grade music genre classification system that:
-- Processes 8,000 audio tracks efficiently using distributed computing (Ray)
-&nbsp;&nbsp;1. [fma_small](https://os.unil.cloud.switch.ch/fma/fma_small.zip)  
-&nbsp;&nbsp;2. [fma_medium](https://os.unil.cloud.switch.ch/fma/fma_medium.zip)  
-&nbsp;&nbsp;3. [fma_metadata](https://os.unil.cloud.switch.ch/fma/fma_metadata.zip)
+- Processes 8,000 audio tracks efficiently using distributed computing (Ray)  
 - Extracts 89 audio features per track (MFCCs, spectral features, tempo, etc.)
 - Trains LightGBM classifier with comprehensive evaluation
 - Provides CLI interface for inference and analysis
@@ -59,6 +56,11 @@ Build a production-grade music genre classification system that:
 ---
 
 ## Project Architecture
+
+Please download the FMA small/medium dataset and the metadata and save it into the suggested directory structure below.  
+&nbsp;&nbsp;1. [fma_small](https://os.unil.cloud.switch.ch/fma/fma_small.zip)  
+&nbsp;&nbsp;2. [fma_medium](https://os.unil.cloud.switch.ch/fma/fma_medium.zip)  
+&nbsp;&nbsp;3. [fma_metadata](https://os.unil.cloud.switch.ch/fma/fma_metadata.zip)
 
 ### Directory Structure
 ```
@@ -484,7 +486,7 @@ MAX_TRACKS = 8000  # Or 25000
 ### Increase CPU Count
 Edit `config.py`:
 ```python
-RAY_NUM_CPUS = 8
+RAY_NUM_CPUS = 7
 
 ### Adjust Hyperparameters
 Edit `config.py`:
