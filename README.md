@@ -102,12 +102,30 @@ For this documentation, we will use the ```fma_small``` dataset.
 
 ## Quick Start
 
-### 1. Install Dependencies
+### 1. Set Up Python Environment
+Go to your directory.
+```bash
+cd your/directory
+```
+It is recommended to use **Python 3.10.11** for this project.  
+- Option A: Using conda (recommended for easy version management)
+```bash
+conda create -n yourenvironment python=3.10.11 -y
+conda activate yourenvironment
+```
+- Option B: Using built-in Python venv
+```bash
+# Make sure python 3.10.11 is installed and available on your PATH
+python -m venv yourenvironment
+yourenvironment\Srcipts\activate
+```
+
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Extract Features (Ray Distributed)
+### 3. Extract Features (Ray Distributed)
 ```bash
 python data.py
 ```
@@ -117,7 +135,7 @@ python data.py
 - Saves to: `preprocessed_features/preprocessed_data_ray.pkl`
 - **Time**: ~20-25 minutes
 
-### 3. Train Model with MLflow Tracking
+### 4. Train Model with MLflow Tracking
 ```bash
 python train.py
 ```
@@ -126,7 +144,7 @@ python train.py
 - Saves model, scaler, label encoder
 - **Time**: ~5 minutes
 
-### 4. (Optional) Hyperparameter Tuning
+### 5. (Optional) Hyperparameter Tuning
 ```bash
 python tune.py
 ```
@@ -135,7 +153,7 @@ python tune.py
 - Saves best configuration
 - **Time**: ~40 seconds (5 trials)
 
-### 5. Train with Tuned Hyperparameters
+### 6. Train with Tuned Hyperparameters
 ```bash
 python train.py --use-tuned-params
 ```
@@ -143,7 +161,7 @@ python train.py --use-tuned-params
 - Falls back to defaults if tuning not completed
 - **Time**: ~5 minutes
 
-### 6. Evaluate Model Comprehensively
+### 7. Evaluate Model Comprehensively
 ```bash
 python evaluate.py
 ```
@@ -155,7 +173,7 @@ python evaluate.py
 - Saves results to: `results/evaluation_results.pkl` and `results/per_class_metrics.csv`
 - **Time**: ~3 minutes
 
-### 7. Predict Genre for Any Song
+### 8. Predict Genre for Any Song
 ```bash
 python predict.py --audio-path "path/to/song.mp3"
 ```
@@ -164,7 +182,7 @@ python predict.py --audio-path "path/to/song.mp3"
 - Shows top 5 predictions
 - **Time**: ~2 seconds
 
-### 8. View Experiment Results
+### 9. View Experiment Results
 ```bash
 mlflow ui
 ```
